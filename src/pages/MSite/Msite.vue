@@ -1,6 +1,7 @@
 
 <template>
     <section class="msite">
+      真真的帅哦
       <HeaderTop :title="address.name">
         <span class="header_search" slot="left">
           <i class="iconfont icon-sousuo"></i>
