@@ -4,9 +4,14 @@
         <FooterGuide v-show="$route.meta.showFooter"/>
     </div>
 </template>
+
 <script>
+
 import FooterGuide from './components/FoooterGuide/FoooterGuide.vue'
 export default {
+  async mounted () {
+     await this.$store.dispatch('getAddress')
+  },
   components: {
     FooterGuide
   }
