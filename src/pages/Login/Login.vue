@@ -105,6 +105,7 @@
             //停止计时
             if (this.computerTime) {
               this.computerTime = 0
+              //停止计时器
               clearInterval(this.intervalId)
               this.intervalId = undefined
             }
@@ -123,7 +124,7 @@
         if(this.loginway){
           //短信登陆
           const{rightPhone, phone, code} =this
-          if(!this.rightPhone){
+          if(!rightPhone){
             //手机号码不正确
             this.showAlert("手机号不正确");
             return

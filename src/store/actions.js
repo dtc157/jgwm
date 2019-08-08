@@ -34,16 +34,16 @@
 
     export default {
       //异步获取地址
-      async getAddress({commit,state}){
-        //1、发送异步ajax请求
-        const geohash =state.latitude+','+state.longitude
-        const result= await reqAddress(geohash)
-        //2、提交一个mutation
-        if(result.code === 0){
-           const address = result.data
-          commit(RECEIVE_ADDRESS,{address})
-        }
-      },
+        async getAddress({commit,state}){
+          //1、发送异步ajax请求
+          const geohash =state.latitude+','+state.longitude
+          const result= await reqAddress(geohash)
+          //2、提交一个mutation
+          if(result.code === 0){
+             const address = result.data
+            commit(RECEIVE_ADDRESS,{address})
+          }
+        },
       //异步获取食品分类数组
       async getCategorys({commit}){
         //1、发送异步ajax请求
@@ -67,7 +67,7 @@
       },
       //同步记录用户信息
       recordUser({commit},userInfo){
-        commit(RECEIVE_USERINFO,{userinfo})
+        commit(RECEIVE_USERINFO,{userInfo})
       },
       //异步登出
       async logout ({commit}){
