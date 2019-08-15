@@ -13,7 +13,7 @@
           <div class="desc">另需配送费￥{{info.deliveryPrice}}元</div>
         </div>
         <div class="content-right">
-          <div class="pay " :class="payClass">
+          <div class="pay " :class="payClass" @click="pay(payText)">
             {{payText}}
           </div>
         </div>
@@ -117,6 +117,15 @@
           action => {
 
           });
+      },
+      //
+      pay(value){
+        if(value=="去结算"){
+          alert("支付成功"+parseInt(this.totalPrice+this.info.deliveryPrice))
+          this.$nextTick(()=>{
+            this.$store.dispatch('clearCart')
+          })
+        }
       }
     },
     components:{

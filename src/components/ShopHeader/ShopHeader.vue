@@ -2,9 +2,6 @@
   <template>
     <div class="shop-header">
       <nav class="shop-nav" :style="{backgroundImage:'url(${info.bgImg})'}">
-        <a class="back">
-          <i class="iconfont icon-jiantou3" @click="$router.back()"></i>
-        </a>
       </nav>
       <div class="shop-content">
         <img class="content-image"
@@ -14,14 +11,14 @@
             <span class="content-tag">
               <span class="mini-tag">品牌</span>
             </span>
-            <span class="content-name">大鸭梨</span>
+            <span class="content-name">小华铺子</span>
             <i class="content-icon"></i>
           </h2>
           <div class="shop-message">
             <span class="shop-message-detail">5</span>
               <span class="shop-message-detail">月售 100 单</span>
               <span class="shop-message-detail">
-              硅谷专送
+              小华专送
                 <span>约 30 分钟</span>
               </span>
             <span class="shop-message-detail">距离 1000m</span>
@@ -266,7 +263,6 @@
           text-overflow ellipsis
           margin 8px auto 10px
           white-space nowrap
-
       .shop-header-discounts
         display flex
         background #fff
@@ -323,7 +319,6 @@
             top 50%
             transform translateY(-50%)
             right 0
-
       .shop-brief-modal
         position fixed
         top 0

@@ -32,8 +32,6 @@ export default function ajax (url,data={},type='GET') {
       reject(error)
     })
   })
-
-
 }
 // const response = await ajax()
 // const result = response.data()

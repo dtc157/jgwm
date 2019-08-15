@@ -39,7 +39,7 @@
             不满意<span class="count">{{(ratings.length)-(positiveSize)}}</span>
           </span>
         </div>
-        <div class="switch " :class="{on:onlyShowText}" @click="toggleOnlyShowText">
+          <div class="switch " :class="{on:onlyShowText}" @click="toggleOnlyShowText">
           <span class="iconfont icon-duigouxiao"></span>
           <span class="text">只看有内容的评价</span>
         </div>
@@ -123,9 +123,9 @@
       setSelectType(selectType){
         this.selectType=selectType
       },
-    toggleOnlyShowText(){
+      toggleOnlyShowText(){
           this.onlyShowText = !this.onlyShowText
-    }
+      }
     },
     components:{
       Star,
@@ -135,7 +135,6 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../../common/sylus/mixins.styl"
-
   .ratings
     position: absolute
     top: 195px
@@ -172,7 +171,7 @@
           color: rgb(147, 153, 159)
       .overview-right
         flex: 1
-        padding: 6px 0 6px 24px
+        padding: 6px 0 6px 0
         @media only screen and (max-width: 320px)
           padding-left: 6px
         .score-wrapper
@@ -196,6 +195,7 @@
             color: rgb(255, 153, 0)
         .delivery-wrapper
           font-size: 0
+          padding-left 15px;
           .title
             line-height: 18px
             font-size: 12px

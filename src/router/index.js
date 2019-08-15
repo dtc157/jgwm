@@ -29,7 +29,7 @@ export default new VueRouter({
 // 所有路由
   routes: [
     {
-      path: '/',
+      path: '/MSite',
       component: MSite,
       meta:{
         showFooter:true
@@ -61,7 +61,7 @@ export default new VueRouter({
       component: Login
     },
     {
-      path: '/shop',
+      path: '/',
       component: Shop,
       children:[
         {
